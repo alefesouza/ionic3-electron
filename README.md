@@ -1,7 +1,7 @@
 Meetup Angular
 =====
 
-Esse é um simples utilizando a API do Meetup para exibir eventos, desenvolvido em Angular 4.1.3 e Ionic 3.4.0.
+Esse é um simples aplicativo utilizando a API do Meetup para exibir eventos, desenvolvido em Angular 4.1.3 e Ionic 3.4.0.
 
 Desenvolvi ele com o intuito de dar palestras sobre aplicativos híbridos utilizando Ionic e Electron, atingindo 6 plataformas diferentes apenas com linguagens web, seguindo as interfaces mobile nativas.
 
