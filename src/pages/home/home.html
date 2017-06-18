@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Meetup Angular
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list *ngIf="items.length > 0">
+        <button ion-item *ngFor="let item of items" (click)="openEvent(item)">
+          <event-item [meetupEvent]="item"></event-item>
+        </button>
+    </ion-list>
+</ion-content>
