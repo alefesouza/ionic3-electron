@@ -59,7 +59,7 @@ Vai pedir para você instalar o pacote @ionic/cli-plugin-cordova, digite Y e ent
 ou
 
 ```
-    ionic emulate android
+    ionic cordova emulate android
 ```
 
 iOS
@@ -81,7 +81,7 @@ Vai pedir para você instalar o pacote @ionic/cli-plugin-cordova, digite Y e ent
 ou
 
 ```
-    ionic emulate ios
+    ionic cordova emulate ios
 ```
 
 Minha palestra começará depois de ter feito tuuuuudo isso. Também recomendo você baixar o ~~melhor editor~~ [Visual Studio Code](https://code.visualstudio.com/) por possuir um melhor suporte a TypeScript ficando mais fácil de me acompanhar.
