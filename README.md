@@ -1,20 +1,16 @@
-Meetup Angular
-=====
+# Meetup Angular
 
 Esse é um simples aplicativo utilizando a API do Meetup para exibir eventos, desenvolvido em Angular 5.0.3 e Ionic 3.9.2.
 
 Desenvolvi ele com o intuito de dar palestras sobre aplicativos híbridos utilizando Ionic e Electron, atingindo 6 plataformas diferentes apenas com linguagens web, seguindo as interfaces mobile nativas.
 
-Pré-requisitos
------
+## Pré-requisitos
 
-Aqui nesse repositório há o aplicativo final, porém pretendo fazer um live code explicando passo a passo cada parte em palestras, como o tempo de uma palestra é normalmente 40 minutos - 1 hora, é necessário você fazer algumas coisas antes para pular o tempo de instalação dos pacotes necessários, que é algo que pode demorar mais ou menos 2 horas.
+Aqui nesse repositório há o aplicativo final, porém pretendo fazer um live code explicando passo a passo cada parte, como o tempo de uma palestra é normalmente 40 minutos - 1 hora, é necessário você fazer algumas coisas antes para pular o tempo de instalação dos pacotes necessários, que é algo que pode demorar mais ou menos 2 horas.
 
 Os requisitos que eu utilizei são:
 
-- Node.js 8.9.1, no dia que eu estava desenvolvendo (03/12/2017) estava havendo problemas com o node-sass no Node.js 8+, portanto não posso garantir que vai funcionar quando você testar, você pode baixar para o seu sistema [clicando aqui](https://nodejs.org/dist/v8.9.1) ou utilizar o NVM/Nodist.
-- Android SDK, é necessário para compilar aplicativos Android, o mais fácil é você baixar o [Android Studio](https://developer.android.com/studio/index.html) pois ele já deixa tudo configurado.
-- Xcode, caso você tenha um Mac e queira compilar pra iOS, só baixá-lo atráves da App Store.
+- Node.js 8.9.1, no dia que eu estava desenvolvendo (03/12/2017) estava havendo problemas com o node-sass no Node.js 9+, portanto não posso garantir que vai funcionar quando você testar, você pode baixar para o seu sistema [clicando aqui](https://nodejs.org/dist/v8.9.1) ou utilizar o NVM/Nodist.
 
 Comandos que você precisa executar antes da palestra, os @versão são opcionais, são apenas as versões que eu utilizei quando desenvolvi o app:
 
@@ -39,8 +35,11 @@ Comandos que você precisa executar antes da palestra, os @versão são opcionai
     npm install electron-builder@19.47.1 --save-dev
 ```
 
-Android
----
+Com isso você já consegue rodar o aplicativo no navegador e no Electron, caso você queira rodar o aplicativo no celular, você precisará instalar o SDK do mesmo e rodar os comandos em seguida:
+
+### Android
+
+- Android SDK, é necessário para compilar aplicativos Android, o mais fácil é você baixar o [Android Studio](https://developer.android.com/studio/index.html) pois ele já deixa tudo configurado.
 
 - Adicionar o projeto Android:
 
@@ -62,8 +61,10 @@ ou
     ionic cordova emulate android
 ```
 
-iOS
----
+### iOS
+
+- Xcode, caso você tenha um Mac e queira compilar pra iOS, só baixá-lo atráves da App Store.
+
 - Adicionar o projeto iOS:
 
 ```
