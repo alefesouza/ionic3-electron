@@ -15,10 +15,9 @@ $reverse = array_reverse($array);
 
 $events = array_map(function($v) {
   preg_match_all('~<img.*?src=["\']+(.*?)["\']+~', $v->description, $urls);
-  
+
   $v->image = $urls[1][0];
-  $v->place = $v->venue->name ?: '';
-  
+
   return $v;
 }, $reverse);
 
