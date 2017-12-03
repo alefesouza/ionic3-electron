@@ -6,22 +6,22 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { EventItemComponent } from '../components/event-item/event-item';
-import { MeetupAPIService } from "../services/meetup-api.service";
-import { HttpModule } from "@angular/http";
-import { DetailsPage } from "../pages/details/details";
+import { DetailsPage } from '../pages/details/details';
+import { MeetupApiProvider } from '../providers/meetup-api/meetup-api';
+import { ComponentsModule } from '../components/components.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    DetailsPage,
-    EventItemComponent
+    DetailsPage
   ],
   imports: [
     BrowserModule,
-    HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ComponentsModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -32,7 +32,7 @@ import { DetailsPage } from "../pages/details/details";
   providers: [
     StatusBar,
     SplashScreen,
-    MeetupAPIService,
+    MeetupApiProvider,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

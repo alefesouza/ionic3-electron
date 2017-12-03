@@ -7,9 +7,9 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-list *ngIf="items.length > 0">
-        <button ion-item *ngFor="let item of items" (click)="openEvent(item)">
-          <event-item [meetupEvent]="item"></event-item>
+    <ion-list>
+        <button ion-item *ngFor="let meetupEvent of meetupEvents" (click)="openEvent(meetupEvent)">
+          <event-item [meetupEvent]="meetupEvent"></event-item>
         </button>
     </ion-list>
 </ion-content>

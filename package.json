@@ -1,92 +1,89 @@
 {
-    "name": "meetup-angular",
-    "version": "1.0.0",
-    "author": "Alefe Souza",
-    "description": "Exemplo de aplicativo Ionic e Electron utilizando a API do Meetup",
-    "homepage": "http://alefesouza.com/",
-    "private": true,
-    "main": "main.js",
-    "scripts": {
-        "clean": "ionic-app-scripts clean",
-        "build": "ionic-app-scripts build",
-        "lint": "ionic-app-scripts lint",
-        "ionic:build": "ionic-app-scripts build",
-        "ionic:serve": "ionic-app-scripts serve",
-        "android:run": "ionic cordova run android",
-        "android:key": "keytool -genkey -v -keystore android_key.keystore -storepass testestore -alias testealias -keypass testepass -keyalg RSA -keysize 2048 -validity 3650",
-        "android:release": "ionic cordova build android --prod --release -- -- --keystore=android_key.keystore --storePassword=testestore --alias=testealias --password=testepass",
-        "electron": "electron .",
-        "build:osx": "build --mac --x64",
-        "build:win": "build --windows --ia32"
+  "name": "meetup-angular",
+  "version": "1.0.0",
+  "author": "Alefe Souza",
+  "description": "Ionic application sample using Electron and Meetup API",
+  "homepage": "http://alefesouza.com",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "clean": "ionic-app-scripts clean",
+    "build": "ionic-app-scripts build",
+    "lint": "ionic-app-scripts lint",
+    "prod": "ionic-app-scripts build --prod --release",
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve",
+    "android:run": "ionic cordova run android",
+    "android:key": "keytool -genkey -v -keystore android_key.keystore -storepass testestore -alias testealias -keypass testepass -keyalg RSA -keysize 2048 -validity 3650",
+    "android:release": "ionic cordova build android --prod --release -- -- --keystore=android_key.keystore --storePassword=testestore --alias=testealias --password=testepass",
+    "electron": "electron .",
+    "build:osx": "build --mac --x64",
+    "build:win": "build --windows --ia32"
+  },
+  "dependencies": {
+    "@angular/common": "5.0.3",
+    "@angular/compiler": "5.0.3",
+    "@angular/compiler-cli": "5.0.3",
+    "@angular/core": "5.0.3",
+    "@angular/forms": "5.0.3",
+    "@angular/http": "5.0.3",
+    "@angular/platform-browser": "5.0.3",
+    "@angular/platform-browser-dynamic": "5.0.3",
+    "@ionic-native/core": "4.4.0",
+    "@ionic-native/splash-screen": "4.4.0",
+    "@ionic-native/status-bar": "4.4.0",
+    "@ionic/storage": "2.1.3",
+    "cordova-android": "6.3.0",
+    "ionic-angular": "3.9.2",
+    "ionicons": "3.0.0",
+    "rxjs": "5.5.2",
+    "sw-toolbox": "3.6.0",
+    "zone.js": "0.8.18",
+    "ionic-plugin-keyboard": "~2.2.1",
+    "cordova-plugin-whitelist": "1.3.1",
+    "cordova-plugin-device": "1.1.4",
+    "cordova-plugin-splashscreen": "~4.0.1",
+    "cordova-plugin-ionic-webview": "^1.1.11"
+  },
+  "devDependencies": {
+    "@ionic/app-scripts": "3.1.4",
+    "electron": "^1.7.9",
+    "electron-builder": "^19.47.1",
+    "typescript": "2.4.2"
+  },
+  "cordova": {
+    "plugins": {
+      "ionic-plugin-keyboard": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {}
     },
-    "dependencies": {
-        "@angular/common": "4.1.3",
-        "@angular/compiler": "4.1.3",
-        "@angular/compiler-cli": "4.1.3",
-        "@angular/core": "4.1.3",
-        "@angular/forms": "4.1.3",
-        "@angular/http": "4.1.3",
-        "@angular/platform-browser": "4.1.3",
-        "@angular/platform-browser-dynamic": "4.1.3",
-        "@ionic-native/core": "3.10.2",
-        "@ionic-native/splash-screen": "3.10.2",
-        "@ionic-native/status-bar": "3.10.2",
-        "@ionic/storage": "2.0.1",
-        "cordova-android": "^6.2.3",
-        "cordova-plugin-console": "^1.0.5",
-        "cordova-plugin-device": "^1.1.4",
-        "cordova-plugin-splashscreen": "^4.0.3",
-        "cordova-plugin-statusbar": "^2.2.2",
-        "cordova-plugin-whitelist": "^1.3.1",
-        "ionic-angular": "3.4.0",
-        "ionic-plugin-keyboard": "^2.2.1",
-        "ionicons": "3.0.0",
-        "rxjs": "5.4.0",
-        "sw-toolbox": "3.6.0",
-        "zone.js": "0.8.12"
+    "platforms": [
+      "android"
+    ]
+  },
+  "build": {
+    "appId": "com.alefesouza.meetup.angular",
+    "copyright": "Copyright © 2017 Alefe Souza",
+    "productName": "Meetup Angular",
+    "files": [
+      "www/**/*",
+      "node_modules/**/*",
+      "main.js",
+      "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme,test,__tests__,tests,powered-test,example,examples,*.d.ts}",
+      "!**/node_modules/electron",
+      "!**/node_modules/.bin",
+      "!**/*.{o,hprof,orig,pyc,pyo,rbc}",
+      "!**/._*",
+      "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,__pycache__,thumbs.db,.gitignore,.gitattributes,.editorconfig,.flowconfig,.yarn-metadata.json,.idea,appveyor.yml,.travis.yml,circle.yml,npm-debug.log,.nyc_output,yarn.lock,.yarn-integrity}"
+    ],
+    "win": {
+      "icon": "www/assets/icon/favicon.ico"
     },
-    "devDependencies": {
-        "@ionic/app-scripts": "1.3.7",
-        "@ionic/cli-plugin-cordova": "1.4.0",
-        "@ionic/cli-plugin-ionic-angular": "1.3.1",
-        "electron": "^1.6.11",
-        "electron-builder": "^19.4.2",
-        "typescript": "2.3.3"
-    },
-    "cordova": {
-        "plugins": {
-            "cordova-plugin-console": {},
-            "cordova-plugin-device": {},
-            "cordova-plugin-splashscreen": {},
-            "cordova-plugin-statusbar": {},
-            "cordova-plugin-whitelist": {},
-            "ionic-plugin-keyboard": {}
-        },
-        "platforms": [
-            "android"
-        ]
-    },
-    "build": {
-        "appId": "com.alefesouza.meetup.angular",
-        "copyright": "Copyright © 2017 Alefe Souza",
-        "productName": "Meetup Angular",
-        "files": [
-            "www/**/*",
-            "node_modules/**/*",
-            "main.js",
-            "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme,test,__tests__,tests,powered-test,example,examples,*.d.ts}",
-            "!**/node_modules/electron",
-            "!**/node_modules/.bin",
-            "!**/*.{o,hprof,orig,pyc,pyo,rbc}",
-            "!**/._*",
-            "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,__pycache__,thumbs.db,.gitignore,.gitattributes,.editorconfig,.flowconfig,.yarn-metadata.json,.idea,appveyor.yml,.travis.yml,circle.yml,npm-debug.log,.nyc_output,yarn.lock,.yarn-integrity}"
-        ],
-        "win": {
-            "icon": "www/assets/icon/favicon.ico"
-        },
-        "nsis": {
-            "oneClick": false,
-            "installerIcon": "www/assets/icon/favicon.ico"
-        }
+    "nsis": {
+      "oneClick": false,
+      "installerIcon": "www/assets/icon/favicon.ico"
     }
+  }
 }
