@@ -10,7 +10,7 @@ Aqui nesse repositório há o aplicativo final, porém pretendo fazer um live co
 
 Os requisitos que eu utilizei são:
 
-- Node.js 8.9.1, no dia que eu estava desenvolvendo (03/12/2017) estava havendo problemas com o node-sass no Node.js 9+, portanto não posso garantir que vai funcionar quando você testar, você pode baixar para o seu sistema [clicando aqui](https://nodejs.org/dist/v8.9.1) ou utilizar o NVM/Nodist.
+- Node.js 7+.
 
 Comandos que você precisa executar antes da palestra, os @versão são opcionais, são apenas as versões que eu utilizei quando desenvolvi o app:
 
@@ -24,7 +24,7 @@ Comandos que você precisa executar antes da palestra, os @versão são opcionai
 - Iniciar um projeto simples do Ionic:
 
 ```
-    ionic start blank meetup-angular
+    ionic start meetup-angular blank
     cd ./meetup-angular
 ```
 
